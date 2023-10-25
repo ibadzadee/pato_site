@@ -1,0 +1,16 @@
+@mixin display($justify:center, $align:center){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin div(){
+    width: 100%;
+}
+
+@mixin image{
+    object-fit: cover;
+    background-size :cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
