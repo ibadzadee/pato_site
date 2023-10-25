@@ -1,4 +1,5 @@
 @import "mixin";
+@import "variables";
 
 *{
     padding: 0;
@@ -9,7 +10,7 @@
 
 .container{
     max-width: 1440px;
-    padding: 0px 60px;
+    padding: 0px 80px;
     margin: auto;
 }
 nav{
@@ -18,19 +19,38 @@ nav{
     .nav-center{
         @include display(space-between, center);
         div{
-            padding: 30px;
+            padding: 30px 0px;
             color: white;
-            a{
+             a{
                 text-decoration: none;
                 color: white;
                 padding: 0px 10px;
             }
             i{
-                padding: 0px 10px
+                // padding: 0px 10px;
+                cursor: pointer;
+                &:hover{
+                    color: $red;
+                    transition: 0.5s
+                }
             }
             ul{
                 @include display;
                 list-style: none;
+                a{
+                    text-decoration: none;
+                    color: white;
+                    padding: 0px 30px;
+                    &:hover{
+                        color: $red;
+                        transition: 1s;
+                    }
+                }
+            }
+            .image{
+                width: 100px;
+                height: 100px;
+                @include image;
             }
         }
     }
@@ -48,31 +68,238 @@ header{
         font-size: 50px;
         color: white;
         button{
-            padding: 15px;
+            padding: 15px 30px;
             border-radius: 10px;
-            color: red;
+            border: none;
+            color: $red;
+            cursor: pointer;
             &:hover{
-                cursor: pointer;
-                background-color: red;
+                background-color: $red;
                 color: white;
+                transition: 1s;
             }
         }
+
         
     }
 }
 
 section{
-    width: 100%;
-    background-color: brown;
-    padding: 20px 0px;
+    @include section-beginning(aliceblue, 130px 100px);
     .sec-center{
-        @include display(space-between, center);
+        @include display(space-around, center);
         width: 100%;
-        height: 300px;
-        div{
+        height: 400px;
+        .left{
             width: 45%;
+            height: 80%;
+            @include display(center, center);
+            flex-direction: column;
+            text-align: center;
+            h1{
+                font-size: 70px;
+            }
+            h3{
+                font-size: 30px;
+                color: $red;
+            }
+            p{
+                padding: 30px 0px;
+                color:$p-color;
+            }
+            a{
+                text-decoration: none;
+            }
+            h1, a{
+                color: $h1-color
+            }
+        }
+        .right{
+            width: 32%;
             height: 100%;
-            background-color: black;
+            border-radius: 30px;
+            background-image: cover;
+            overflow: hidden;
+            img{
+                border-radius: 30px;
+                width: 100%;
+                height: 100%;
+                @include image;
+                transition: all 0.5s ease;
+                
+            }
+            &:hover img{
+                scale: 1.1;
+            }
+        }
+}
+}
+
+.sec-2{
+    @include section-beginning(black, 130px 0px);
+    width: 100%;
+    @include display;
+    background-image: url(https://preview.colorlib.com/theme/pato/images/bg-intro-01.jpg);
+    color: white;
+    text-align: center;
+    @include image;
+    background-attachment: fixed;
+    p{
+        color: $red;
+        // font-family:;
+        font-size: 30px;
+    }
+    h1{
+        font-size: 60px
+    }
+
+}
+
+.sec-3{
+    @include section-beginning(white, 100px 0px);
+    .sec-3-center{
+        width: 100%;
+        height: 400px;
+        display: grid;
+        grid-template-columns: repeat(3,auto);
+        gap: 30px;
+        div{
+            border-radius: 10px;
+            overflow: hidden;
+
+            h1{
+                padding: 10px 0px;
+
+            }
+            p{
+                padding-bottom: 20px;
+                color: $p-color;
+            }
+            a{
+                text-decoration: none;
+                color: $h1-color;
+                &:hover{
+                    color: $red;
+                }
+            }
+            img{
+                border-radius: 10px;
+                @include image;
+                width: 100%;
+                transition: all 0.5s ease;
+
+                height: 10%;
+                &:hover{
+                    scale: 1.1; 
+                }
+
+  
+            }
         }
     }
+}
+
+.sec-4{
+    @include section-beginning(whitesmoke, 100px 0px);
+    .sec-4-center{
+        @include display(space-between, center);
+        flex-direction: column;
+        text-align: center;
+        height: 150vh;
+
+        .top{
+            width: 100%;
+            height: 15px;
+            h3{
+                font-size: 30px;
+                color: $red;
+            }
+            h1{
+                color: $h1-color;
+                font-size: 60px;
+            }
+        }
+        .bottom{
+            width: 100%;
+            height: 85%;
+            display: grid;
+            grid-template-columns: repeat(3,auto);
+            grid-template-rows: repeat(3,auto);
+            gap: 20px;
+            position: relative;
+
+            div{
+                background-color: aqua;
+                border-radius: 10px;
+                @include image;
+                background-attachment: scroll;
+                overflow: hidden;
+                @include display;
+                h3{
+                    color: $h1-color;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 10px;
+                    transition: all 0.5s ease;
+
+                    &:hover{
+                        scale: 1.1;
+                    }
+                }
+            }
+            #one{
+                grid-column-start: 1;
+                grid-column-end: 2;
+                grid-row-start: 1;
+                grid-row-end: 3;
+            }
+            #two{
+                grid-column-start: 2;
+                grid-column-end: 3;
+                grid-row-start: 1;
+                grid-row-end: 3;
+            }
+            #three{
+                grid-column-start: 3;
+                grid-column-end: 4;
+                grid-row-start: 1;
+                grid-row-end: 2;
+            }
+            #four{
+                grid-column-start: 3;
+                grid-column-end: 4;
+                grid-row-start: 2;
+                grid-row-end: 3;
+            }
+            
+            #five{
+                grid-column-start: 1;
+                grid-column-end: 3;
+                grid-row-start: 3;
+                grid-row-end: 4;
+            }
+            #six{
+                grid-column-start: 3;
+                grid-column-end: 4;
+                grid-row-start: 3;
+                grid-row-end: 4;
+            }
+            button{
+                position: absolute;
+                padding: 15px 40px;
+                font-size: 18px;
+                cursor: pointer;
+                border: none;
+                border-radius: 10px;
+                opacity: 0.9;
+                &:hover{
+                    background-color: $red;
+                    color: white;
+                }
+            }
+        }
+    }
+
 }

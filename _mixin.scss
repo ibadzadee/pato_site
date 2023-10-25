@@ -14,3 +14,9 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+
+@mixin section-beginning($color, $padding){
+    width: 100%;
+    background-color: $color;
+    padding: $padding;
+}
