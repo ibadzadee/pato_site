@@ -96,52 +96,52 @@ header .header-center button:hover {
   transition: 1s;
 }
 
-section {
+#italian {
   width: 100%;
   background-color: aliceblue;
   padding: 130px 100px;
 }
-section .sec-center {
+#italian .sec-center {
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  height: 400px;
 }
-section .sec-center .left {
+#italian .sec-center .left {
   width: 45%;
-  height: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
 }
-section .sec-center .left h1 {
+#italian .sec-center .left h1 {
   font-size: 70px;
 }
-section .sec-center .left h3 {
+#italian .sec-center .left h3 {
   font-size: 30px;
   color: #d61c22;
 }
-section .sec-center .left p {
+#italian .sec-center .left p {
   padding: 30px 0px;
   color: rgb(144, 144, 144);
 }
-section .sec-center .left a {
+#italian .sec-center .left a {
   text-decoration: none;
 }
-section .sec-center .left h1, section .sec-center .left a {
+#italian .sec-center .left a:hover {
+  color: #d61c22;
+}
+#italian .sec-center .left h1, #italian .sec-center .left a {
   color: #222222;
 }
-section .sec-center .right {
+#italian .sec-center .right {
   width: 32%;
-  height: 100%;
   border-radius: 30px;
   background-image: cover;
   overflow: hidden;
 }
-section .sec-center .right img {
+#italian .sec-center .right img {
   border-radius: 30px;
   width: 100%;
   height: 100%;
@@ -152,7 +152,7 @@ section .sec-center .right img {
   background-repeat: no-repeat;
   transition: all 0.5s ease;
 }
-section .sec-center .right:hover img {
+#italian .sec-center .right:hover img {
   scale: 1.1;
 }
 
@@ -189,7 +189,6 @@ section .sec-center .right:hover img {
 }
 .sec-3 .sec-3-center {
   width: 100%;
-  height: 400px;
   display: grid;
   grid-template-columns: repeat(3, auto);
   gap: 30px;
@@ -238,11 +237,6 @@ section .sec-center .right:hover img {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  height: 150vh;
-}
-.sec-4 .sec-4-center .top {
-  width: 100%;
-  height: 15px;
 }
 .sec-4 .sec-4-center .top h3 {
   font-size: 30px;
@@ -253,8 +247,6 @@ section .sec-center .right:hover img {
   font-size: 60px;
 }
 .sec-4 .sec-4-center .bottom {
-  width: 100%;
-  height: 85%;
   display: grid;
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(3, auto);
@@ -335,4 +327,69 @@ section .sec-center .right:hover img {
 .sec-4 .sec-4-center .bottom button:hover {
   background-color: #d61c22;
   color: white;
+}
+
+.sec-5 {
+  width: 100%;
+  background-color: lightgreen;
+  padding: 100px 0px;
+  background-image: url(https://preview.colorlib.com/theme/pato/images/bg-event-01.jpg);
+}
+.sec-5 .sec-5-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.sec-5 .sec-5-center #hour {
+  width: 30%;
+  height: 50px;
+  background-color: #d61c22;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transform: rotate(90deg);
+  left: 0px;
+  bottom: 0;
+}
+.sec-5 .sec-5-center #hour p {
+  color: white;
+}
+.sec-5 .sec-5-center #text {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  color: white;
+}
+.sec-5 .sec-5-center #text h1 {
+  padding-top: 20px;
+}
+.sec-5 .sec-5-center #card {
+  width: 100%;
+  height: 400px;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  display: flex;
+}
+.sec-5 .sec-5-center #card .left {
+  width: 50%;
+  height: 100%;
+  background-color: aqua;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-image: url(https://preview.colorlib.com/theme/pato/images/event-01.jpg);
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.sec-5 .sec-5-center #card .right {
+  width: 50%;
+  height: 100%;
+  background-color: black;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }/*# sourceMappingURL=index.css.map */
