@@ -340,22 +340,6 @@ header .header-center button:hover {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  position: relative;
-}
-.sec-5 .sec-5-center #hour {
-  width: 30%;
-  height: 50px;
-  background-color: #d61c22;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  transform: rotate(90deg);
-  left: 0px;
-  bottom: 0;
-}
-.sec-5 .sec-5-center #hour p {
-  color: white;
 }
 .sec-5 .sec-5-center #text {
   width: 100%;
@@ -385,8 +369,23 @@ header .header-center button:hover {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
-.sec-5 .sec-5-center #card .right {
+.sec-5 .sec-5-center #card .left:after {
+  content: "08:00 PM Tuesday - 21 November 2018";
+  padding: 10px;
+  transform: rotate(90deg);
+  background-color: #d61c22;
+  position: absolute;
+  left: -140px;
+}
+.sec-5 .sec-5-center #card .left p {
+  color: white;
+}
+.sec-5 .sec-5-center .right {
   width: 50%;
   height: 100%;
   background-color: black;

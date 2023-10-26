@@ -302,21 +302,6 @@ header{
     .sec-5-center{
         @include display(space-between, center);
         flex-direction: column;
-        position: relative;
-        #hour{
-            width: 30%;
-            height: 50px;
-            background-color: $red;
-            @include display;
-            position: absolute;
-            transform: rotate(90deg);
-            left: 0px;
-            bottom: 0;
-            p{
-                color: white;
-            }
-
-        }
         // height: 500px;
         #text{
             width: 100%;
@@ -334,6 +319,7 @@ header{
             background-color: antiquewhite;
             border-radius: 10px;
             display: flex;
+
                 .left{
                     width: 50%;
                     height: 100%;
@@ -342,7 +328,25 @@ header{
                     border-bottom-left-radius: 10px;
                     background-image: url(https://preview.colorlib.com/theme/pato/images/event-01.jpg);
                     @include image;
-                    
+                    position: relative;
+                    @include display(flex-start,center);
+                    &:after{
+                        content: "08:00 PM Tuesday - 21 November 2018";
+                        padding: 10px;
+                        transform: rotate(90deg);
+                        background-color: $red;
+                        position: absolute;
+                        left: -140px;
+                        
+
+                        
+
+                    }
+                        p{
+                            color: white;
+                        }
+
+                    }
                 }
                 .right{
                     width: 50%;
@@ -355,4 +359,4 @@ header{
     }
     
 
-}
+
